@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genre: MyString
+  description: MyString
+  price: 1
+  length: 9.99
+  width: 9.99
+  medium: MyString
+  artist: one
+
+two:
+  genre: MyString
+  description: MyString
+  price: 1
+  length: 9.99
+  width: 9.99
+  medium: MyString
+  artist: two

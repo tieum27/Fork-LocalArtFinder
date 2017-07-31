@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gallery.name %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @gallery.website %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @gallery.phone %>
+</p>
+
+<p>
+  <strong>Opening:</strong>
+  <%= @gallery.opening %>
+</p>
+
+<p>
+  <strong>Closing:</strong>
+  <%= @gallery.closing %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @gallery.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @gallery.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @gallery.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @gallery.zipcode %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @gallery.artist %>
+</p>
+
+<p>
+  <strong>Art:</strong>
+  <%= @gallery.art %>
+</p>
+
+<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
+<%= link_to 'Back', galleries_path %>

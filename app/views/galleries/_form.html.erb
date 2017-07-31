@@ -1,0 +1,72 @@
+<%= form_with(model: gallery, local: true) do |form| %>
+  <% if gallery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gallery.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+      <ul>
+      <% gallery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :gallery_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website, id: :gallery_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :gallery_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opening %>
+    <%= form.time_select :opening, id: :gallery_opening %>
+  </div>
+
+  <div class="field">
+    <%= form.label :closing %>
+    <%= form.time_select :closing, id: :gallery_closing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street, id: :gallery_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :gallery_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :gallery_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode, id: :gallery_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artist_id %>
+    <%= form.text_field :artist_id, id: :gallery_artist_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :art_id %>
+    <%= form.text_field :art_id, id: :gallery_art_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

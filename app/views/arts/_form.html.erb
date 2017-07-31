@@ -1,0 +1,52 @@
+<%= form_with(model: art, local: true) do |form| %>
+  <% if art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
+
+      <ul>
+      <% art.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :genre %>
+    <%= form.text_field :genre, id: :art_genre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :art_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :art_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :length %>
+    <%= form.text_field :length, id: :art_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :width %>
+    <%= form.text_field :width, id: :art_width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medium %>
+    <%= form.text_field :medium, id: :art_medium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artist_id %>
+    <%= form.text_field :artist_id, id: :art_artist_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

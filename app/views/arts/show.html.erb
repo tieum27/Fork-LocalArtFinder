@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @art.genre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @art.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @art.price %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @art.length %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @art.width %>
+</p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @art.medium %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @art.artist %>
+</p>
+
+<%= link_to 'Edit', edit_art_path(@art) %> |
+<%= link_to 'Back', arts_path %>
