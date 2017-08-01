@@ -1,9 +1,12 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+
 
   # GET /customers
   # GET /customers.json
   def index
+    @ability = Ability.new(current_user)
     @customers = Customer.all
   end
 
