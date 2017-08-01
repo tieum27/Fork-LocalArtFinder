@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170731230105) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "artists", force: :cascade do |t|
     t.string "alias"
     t.string "first_name"
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170731230105) do
     t.decimal "length"
     t.decimal "width"
     t.string "medium"
-    t.integer "artist_id"
+    t.bigint "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_arts_on_artist_id"
@@ -58,9 +61,9 @@ ActiveRecord::Schema.define(version: 20170731230105) do
   create_table "events", force: :cascade do |t|
     t.time "start"
     t.time "end"
-    t.integer "gallery_id"
-    t.integer "artist_id"
-    t.integer "art_id"
+    t.bigint "gallery_id"
+    t.bigint "artist_id"
+    t.bigint "art_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["art_id"], name: "index_events_on_art_id"
@@ -78,12 +81,18 @@ ActiveRecord::Schema.define(version: 20170731230105) do
     t.string "city"
     t.string "state"
     t.string "zipcode"
-    t.integer "artist_id"
-    t.integer "art_id"
+    t.bigint "artist_id"
+    t.bigint "art_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["art_id"], name: "index_galleries_on_art_id"
     t.index ["artist_id"], name: "index_galleries_on_artist_id"
   end
 
+  add_foreign_key "arts", "artists"
+  add_foreign_key "events", "artists"
+  add_foreign_key "events", "arts"
+  add_foreign_key "events", "galleries"
+  add_foreign_key "galleries", "artists"
+  add_foreign_key "galleries", "arts"
 end
