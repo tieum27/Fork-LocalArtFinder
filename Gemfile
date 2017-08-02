@@ -26,6 +26,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -33,6 +36,12 @@ gem 'jquery-rails'
 gem 'pg'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Google Map API gem
+gem 'underscore-rails'
+gem 'geocoder'
+gem 'gmaps4rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

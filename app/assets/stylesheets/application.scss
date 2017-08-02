@@ -16,6 +16,26 @@ html, body {
 .carousel-inner > .carousel-item > img {
     margin: 0 auto;
 }
+<<<<<<< HEAD
+=======
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+/* Colors */
+$dk-blue: #1E83AE;
+$blue: #3D5B94;
+$light-blue: #3DACDD;
+$green: #6dcd9a;
+$social-size: 1.2em;
+$social-width: 20%;
+
+html, body {
+  height: 100%;
+  font-family: Raleway, sans-serif;
+  background-color: #fff;
+}
+.carousel-inner > .carousel-item > img {
+    margin: 0 auto;
+}
+>>>>>>> fa6e1c9323874de4187d5fe97915c96a73b56c02
 /*##### Global Classes #####*/
 * {margin: 0;padding: 0;}
 body { font-family: arial; font-size: 16px;}
